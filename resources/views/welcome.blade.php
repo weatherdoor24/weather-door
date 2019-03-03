@@ -40,8 +40,8 @@ Real time weather information
                                 <tr>              
                                    <th scope="col">Sr No</th>
                                    <th scope="col">Observed At UTC</th>
-                                   <th scope="col">Humidity</th>
                                    <th scope="col">Temperature</th>
+                                   <th scope="col">Humidity</th>
                                 </tr>
                             </thead>
                             <tbody id="box"></tbody>
