@@ -13,6 +13,8 @@
 
 
 Route::get("/", "Web\FrontController@index");
+Route::any("/contact", "Web\FrontController@contact")->name('contact');
+Route::get("/about", "Web\FrontController@about")->name('about');
 
 Auth::routes();
 
