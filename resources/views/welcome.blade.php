@@ -31,11 +31,10 @@ Real time weather information
 
                 <div class="tab-content" id="myTabContent">
                     <div class="tab-pane fade show active p-3" id="one" role="tabpanel" aria-labelledby="one-tab">
-                        <div id="graph_weather">
-                    </div>            
+                        <div id="graph_weather"></div>            
                     </div>
-                    <div class="tab-pane fade p-3" id="two" role="tabpanel" aria-labelledby="two-tab">
-                        <table class="table">
+                    <div class="tab-pane fade p-3 table-responsive" id="two" role="tabpanel" aria-labelledby="two-tab">
+                        <table class="table table-striped table-bordered table-hover table-condensed">
                             <thead class="thead-light">
                                 <tr>              
                                    <th scope="col">Sr No</th>
