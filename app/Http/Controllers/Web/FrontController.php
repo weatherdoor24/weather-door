@@ -72,4 +72,8 @@ class FrontController extends Controller
             return back();
         }
     }
+
+    public function weatherInformation(){
+        return view("weatherInformation");
+    }
 }

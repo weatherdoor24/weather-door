@@ -15,6 +15,7 @@
 Route::get("/", "Web\FrontController@index");
 Route::any("/contact", "Web\FrontController@contact")->name('contact');
 Route::get("/about", "Web\FrontController@about")->name('about');
+Route::get("/weather-information", "Web\FrontController@weatherInformation")->name('weather-information');
 
 Auth::routes();
 

@@ -40,6 +40,7 @@ firebase[_0x8df2[6]](config)
         <main class="py-4">
             @yield("content")
         </main>
+        @includeif('partial.footer')
     </div>
 
 
