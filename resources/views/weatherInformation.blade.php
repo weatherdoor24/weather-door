@@ -21,19 +21,19 @@ Real time weather information
                 <div class="card-header tab-card-header">
                   <ul class="nav nav-tabs card-header-tabs" id="myTab" role="tablist">
                     <li class="nav-item active">
-                        <a class="nav-link active" id="one-tab" data-toggle="tab" href="#one" role="tab" aria-controls="One" aria-selected="true">Graph <i class="fa fa-graph"></i> </a>
+                        <a class="nav-link active" id="one-tab" data-toggle="tab" href="#graph" role="tab" aria-controls="One" aria-selected="true">Graph <i class="fa fa-graph"></i> </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" id="two-tab" data-toggle="tab" href="#two" role="tab" aria-controls="Two" aria-selected="false">Table</a>
+                        <a class="nav-link" id="two-tab" data-toggle="tab" href="#table" role="tab" aria-controls="Two" aria-selected="false">Table</a>
                     </li>
                   </ul>
                 </div>
 
                 <div class="tab-content" id="myTabContent">
-                    <div class="tab-pane fade show active p-3" id="one" role="tabpanel" aria-labelledby="one-tab">
+                    <div class="tab-pane fade show active p-3" id="graph" role="tabpanel" aria-labelledby="one-tab">
                         <div id="graph_weather"></div>            
                     </div>
-                    <div class="tab-pane fade p-3 table-responsive" id="two" role="tabpanel" aria-labelledby="two-tab">
+                    <div class="tab-pane fade p-3 table-responsive" id="table" role="tabpanel" aria-labelledby="two-tab">
                         <table class="table table-striped table-bordered table-hover table-condensed">
                             <thead class="thead-light">
                                 <tr>              

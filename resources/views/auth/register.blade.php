@@ -1,5 +1,17 @@
 @extends('layouts.app')
 
+@section('title')
+Register
+@endsection
+
+@section('css')
+
+@endsection
+
+@section('js-head')
+
+@endsection
+
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
@@ -74,4 +86,8 @@
         </div>
     </div>
 </div>
+@endsection
+
+@section('js-body')
+
 @endsection
