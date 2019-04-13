@@ -111,10 +111,10 @@
 
 
                 $('#temp').fadeOut(1000,function() {
-                    $(this).html(last_array.temperature + " °C").fadeIn(1000);
+                    $(this).html(parseFloat(last_array.temperature).toFixed(2) + " °C").fadeIn(1000);
                 });
                 $('#hum').fadeOut(1000,function() {
-                    $(this).html(last_array.humidity + " %").fadeIn(1000);
+                    $(this).html(parseFloat(last_array.humidity).toFixed(2) + " %").fadeIn(1000);
                 });
                 $('.time').fadeOut(1000,function() {
                     $(this).html(localTime_datetime).fadeIn(1000);
@@ -145,12 +145,19 @@
                 let localTime_datetime  = moment.utc(dt_datetime);
                 localTime_datetime = moment(localTime_datetime).format('YYYY-MM-DD HH:mm:ss');
 
+                let temp = parseFloat(obsValue[i].temperature);
+
+                let fixed_temp = temp.toFixed(2);
+
+                let hum = parseFloat(obsValue[i].humidity);
+                let fixed_hum = hum.toFixed(2);
+
                 var index = i + 1;
                 html+="<tr>";
                 html+="<td>"+index+"</td>";
                 html+="<td>"+localTime_datetime+"</td>";
-                html+="<td>"+obsValue[i].temperature+"</td>";
-                html+="<td>"+obsValue[i].humidity+"</td>";
+                html+="<td>"+fixed_temp+"</td>";
+                html+="<td>"+fixed_hum+"</td>";
                 html+="</tr>";
             }
 
