@@ -16,6 +16,15 @@
 
     <div class="container">
         <div class="row">
+            <div class="col-sm-12 col-md-12 col-xm-12">
+                <div class="card-body">
+                    <div class="col-md-2">
+                        <select id="areaSelect" class="form-control input-sm">
+                            
+                        </select>
+                    </div>
+                </div>
+            </div>
             <div class="col-sm-12 col-md-8 col-xm-12">
                 <div class="card tab-card">
                     <div class="card-header tab-card-header">
@@ -97,6 +106,21 @@
         var date_time       = [];
         var humidity        = [];
         var temperature     = [];
+
+        firebase.database().ref('/prod/location').on('value', function(snapshot){
+            locationValue = snapshotToArray(snapshot);
+           var areaName =  locationValue.filter(function(location) {
+             return location.type == "Area";
+            });
+
+           var contents = "";
+
+            for (var i = 0; i < areaName.length; i++) {
+                    contents += '<option selected value='+areaName[i].id+ '>'+ areaName[i].name+'</option>';
+         
+            }
+            $("#areaSelect").html(contents);
+        });
 
 
         firebase.database().ref('/prod/observed').on('value', function(snapshot){
